@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nombre_entier", "nombre_ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "correction", "correction\correction.csproj", "{CFEFDA46-A065-41C4-A2BD-9112538A9010}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triabulle", "triabulle\triabulle.csproj", "{090CF9F5-040B-4230-B21A-8F7050F42E1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CFEFDA46-A065-41C4-A2BD-9112538A9010}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFEFDA46-A065-41C4-A2BD-9112538A9010}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFEFDA46-A065-41C4-A2BD-9112538A9010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090CF9F5-040B-4230-B21A-8F7050F42E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090CF9F5-040B-4230-B21A-8F7050F42E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090CF9F5-040B-4230-B21A-8F7050F42E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090CF9F5-040B-4230-B21A-8F7050F42E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

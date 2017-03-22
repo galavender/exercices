@@ -12,31 +12,29 @@ namespace nombre_entier
         {
             Console.Clear();
             Console.WriteLine("Combien de nombre premier : ");
+
             string valeurx = Console.ReadLine();
-            int x = int.Parse(valeurx);
-            int i = 3, j, k=1;
+            int n = int.Parse(valeurx);
+
+            int i = 2, j, compt=0;
             bool est_premier;
-            Console.WriteLine("\n2");
-            while (k<x)
+          
+            while (compt<n)
             {
                 j = 2;
                 est_premier = true;
-                while(j < i)
+                while((j < i)&&(est_premier))
                 {
-                    if(i%j==0)
-                    {
-                        est_premier = false;
-                    }
+                    if(i%j==0) est_premier = false;
                     j++;
                 }
 
                 if(est_premier)
                 {
                     Console.WriteLine(i);
-                    k++;
+                    compt++;
                 }
-                i++;
-               
+                i++;               
             }
             Console.ReadKey();
         }
