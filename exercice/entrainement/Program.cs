@@ -15,10 +15,11 @@ namespace entrainement
         }
         static void Demo()
         {
+
             string texte;
             string phrase;
-            int nb_phrases=1, nb_mots=1, nb_carac;  //plusieurs entiers
-            const double PI = 3.14159236;
+            int nb_phrases=1, nb_mots=1;  //plusieurs entiers
+            //const double PI = 3.14159236;
             const string Deb_liste = " - ";
 
             phrase = "le C# est un language moderne et puissant!\n";
