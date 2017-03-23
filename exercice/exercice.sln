@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triabulle", "triabulle\tria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compte_voyelle_et_consonne", "compte_voyelle_et_consonne\compte_voyelle_et_consonne.csproj", "{1BCF4738-DAB7-4EAE-9C4C-330DC0B217E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "météo", "météo\météo.csproj", "{86B7F13B-1106-4AF4-9326-45DA48C1938E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "login", "login\login.csproj", "{3841EC3D-AB08-4884-A677-16DE5F8355F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{1BCF4738-DAB7-4EAE-9C4C-330DC0B217E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BCF4738-DAB7-4EAE-9C4C-330DC0B217E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BCF4738-DAB7-4EAE-9C4C-330DC0B217E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86B7F13B-1106-4AF4-9326-45DA48C1938E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86B7F13B-1106-4AF4-9326-45DA48C1938E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86B7F13B-1106-4AF4-9326-45DA48C1938E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86B7F13B-1106-4AF4-9326-45DA48C1938E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
