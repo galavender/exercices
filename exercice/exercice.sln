@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "compte_voyelle_et_consonne"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "login", "login\login.csproj", "{3841EC3D-AB08-4884-A677-16DE5F8355F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compte_bancaire", "Compte_bancaire\Compte_bancaire.csproj", "{6F173C8A-2AAF-42A8-B236-13E8AFA45F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boites", "Boites\Boites.csproj", "{971CAD3E-B903-490A-94B5-FF366ABD8D65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3841EC3D-AB08-4884-A677-16DE5F8355F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F173C8A-2AAF-42A8-B236-13E8AFA45F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F173C8A-2AAF-42A8-B236-13E8AFA45F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F173C8A-2AAF-42A8-B236-13E8AFA45F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F173C8A-2AAF-42A8-B236-13E8AFA45F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971CAD3E-B903-490A-94B5-FF366ABD8D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971CAD3E-B903-490A-94B5-FF366ABD8D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971CAD3E-B903-490A-94B5-FF366ABD8D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971CAD3E-B903-490A-94B5-FF366ABD8D65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
