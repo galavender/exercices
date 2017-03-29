@@ -124,6 +124,13 @@ namespace Compte_bancaire
     {
         static void Main(string[] args)
         {
+            carte c = new carte {
+                NumeroCarte = 11306843,
+                NumeroCompte = 0364801,
+                CodeSecret = 1201,
+                DateExpiration = DateTime.Today.AddYears(2),
+                CodeVerif = 36430 };
+
             DateTime dt = new DateTime(1996, 5, 12);
             Compte j = new Compte(true, 200);
             // j.CalculAncienneté();
