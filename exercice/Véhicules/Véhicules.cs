@@ -11,17 +11,23 @@ namespace Véhicules
         Aucune, Essence, Gazole, GPL, Electrique
     }
 
-    public class Véhicules
+    public abstract class Véhicules : IComparable
     {
+        public decimal Prix { get; set; }
         public string Nom { get; }
         public int NbRoues { get; }
         public Energies  Energie{ get; }
-
+        public abstract decimal PRK { get; }
         public Véhicules(String nom, int nbRoues, Energies energie)
         {
             Nom = nom;
             NbRoues = nbRoues;
             Energie = energie;
+        }
+        public Véhicules(String nom, decimal prix)
+        {
+            Nom = nom;
+            Prix = prix;
         }
         public virtual string Description
         {
@@ -30,6 +36,29 @@ namespace Véhicules
                 return string.Format("Véhicule {0} roule sur {1} roues et à l'énergie {2}", Nom, NbRoues, Energie);
             }
         }
+        public abstract void CalculerConso();
+
+        //public abstract int CompareTo(object obj);
+        public  int CompareTo(object obj)
+        {
+            /* if (obj is Véhicules)
+             {
+                 if (((Véhicules)obj).PRK < PRK)
+                     return 1;
+                 else if (((Véhicules)obj).PRK == PRK)
+                     return 0;
+                 else
+                     return -1;
+             }
+             else
+                 throw new ArgumentException();*/
+
+
+            if (obj is Véhicules)
+                return Prix.CompareTo(((Véhicules)obj).Prix);
+            else
+                throw new ArgumentException();
+        }
     }
 
     public class Voiture : Véhicules
@@ -37,6 +66,7 @@ namespace Véhicules
         public Voiture(string nom, Energies energie) : base(nom, 4, energie)
         {
         }
+        public Voiture(string nom, decimal prix) : base(nom, prix) { }
         public override string Description
         {
             get
@@ -44,6 +74,25 @@ namespace Véhicules
                 return "Je suis une Voiture \r\n" + base.Description;
             }
         }
+
+        public string RefaireParallélisme()
+        {
+            return string.Format("Parallélisme refait");
+        }
+
+        public override decimal PRK
+        {
+            get
+            {
+                return 5;
+            }
+        }
+
+        public override void CalculerConso()
+        {
+            throw new NotImplementedException();
+        }
+       
     }
 
     public class Moto : Véhicules
@@ -51,12 +100,26 @@ namespace Véhicules
         public Moto(string nom, Energies energie) : base(nom, 2, energie)
         {
         }
+        public Moto(string nom, decimal prix) : base(nom, prix) { }
         public override string Description
         {
             get
             {
                 return "Je suis une Moto \r\n" + base.Description;
             }
+        }
+
+        public override decimal PRK
+        {
+            get
+            {
+                return 4;
+            }
+        }
+
+        public override void CalculerConso()
+        {
+            throw new NotImplementedException();
         }
     }
 }

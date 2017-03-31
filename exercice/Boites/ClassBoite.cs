@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,7 @@ namespace Boites
         public Boites()
         {        
             NbBoite++;
+            Articles = new SortedDictionary<int, Article>();
         }
         public Boites(double hauteur, double longueur, double largeur):this()
         {
@@ -61,6 +63,7 @@ namespace Boites
 
 
         #region propriété
+        public SortedDictionary<int, Article> Articles { get; }
         public double hauteur
         {
             get { return _hauteur; }
