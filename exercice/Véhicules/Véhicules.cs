@@ -18,17 +18,23 @@ namespace Véhicules
         public int NbRoues { get; }
         public Energies  Energie{ get; }
         public abstract decimal PRK { get; }
+        public Dictionary<DateTime, string> CarnetEntretien { get; }
+
         public Véhicules(String nom, int nbRoues, Energies energie)
         {
             Nom = nom;
             NbRoues = nbRoues;
             Energie = energie;
+            CarnetEntretien = new Dictionary<DateTime, string>();
         }
         public Véhicules(String nom, decimal prix)
         {
             Nom = nom;
             Prix = prix;
+            NbRoues = 0;
+            CarnetEntretien = new Dictionary<DateTime, string>();
         }
+
         public virtual string Description
         {
             get
@@ -41,23 +47,17 @@ namespace Véhicules
         //public abstract int CompareTo(object obj);
         public  int CompareTo(object obj)
         {
-            /* if (obj is Véhicules)
-             {
-                 if (((Véhicules)obj).PRK < PRK)
-                     return 1;
-                 else if (((Véhicules)obj).PRK == PRK)
-                     return 0;
-                 else
-                     return -1;
-             }
-             else
-                 throw new ArgumentException();*/
-
-
             if (obj is Véhicules)
                 return Prix.CompareTo(((Véhicules)obj).Prix);
             else
                 throw new ArgumentException();
+        }
+
+        public void Entretenir(DateTime date, DelegueEntretien entretien )
+        {
+            if (!CarnetEntretien.ContainsKey(date))
+                CarnetEntretien.Add(date, string.Empty);
+            CarnetEntretien[date] += entretien(this);
         }
     }
 
@@ -66,7 +66,9 @@ namespace Véhicules
         public Voiture(string nom, Energies energie) : base(nom, 4, energie)
         {
         }
-        public Voiture(string nom, decimal prix) : base(nom, prix) { }
+        public Voiture(string nom, decimal prix) : base(nom, prix)
+        {
+        }
         public override string Description
         {
             get
@@ -122,4 +124,7 @@ namespace Véhicules
             throw new NotImplementedException();
         }
     }
+
+
+    public delegate string DelegueEntretien(Véhicules v);
 }

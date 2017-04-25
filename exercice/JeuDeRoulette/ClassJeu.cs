@@ -24,8 +24,9 @@ namespace JeuDeRoulette
 
         #region Méthode publique
         public void Jouer()
-        {     
-            do{
+        {
+            do
+            {
                 Mise mise;
                 SaisirMise(out mise);
                 AfficherRésultat(_roulette.LancerBille(), mise);
@@ -45,13 +46,20 @@ namespace JeuDeRoulette
 
         private void SaisirMise(out Mise mise)
         {
+            Combinaisons combi = Combinaisons.Aucune;
+
             Console.WriteLine("Quelle combinaison choisissez-vous ?");
             Console.WriteLine("24p / 24d : 24 premiers ou derniers numéros");
             Console.WriteLine("r / n : Couleur rouge ou noire");
             Console.WriteLine("i / p : Numéro impair ou pair");
             Console.WriteLine("x : Un numéro précis");
-            string combi = Console.ReadLine();
 
+            combi |= (Combinaisons)Enum.Parse(typeof(Combinaisons), Console.ReadLine());
+
+            Console.WriteLine("Combien de jetons misez-vous ? (max : {0})",_nbJetons);
+            int misejeton = int.Parse(Console.ReadLine());
+
+            mise = new Mise(misejeton, combi, 2);
 
 
         }
